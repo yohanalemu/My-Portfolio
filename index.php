@@ -166,7 +166,7 @@
                 <img src="images/portfolio-screenshot.png" alt="Project 1">
                 <div class="project__content">
                     <h4>Yohana's Portfolio</h4>
-                    <p class="project__tags">HTML • CSS • JavaScript</p>
+                    <p class="project__tags">HTML • CSS • JavaScript • PHP</p>
                     <p class="project__description">Designed and developed my ideal portfolio you're currently on!</p>
                     <hr>
                     <div class="project__links">
