@@ -1,0 +1,266 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!--FONT LINKS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+<div id="preloader">
+    <div class="loader">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M370.24 425.59a14.89 14.89 0 0 1-7-1.72L257 368l-106.26 55.87A15 15 0 0 1 129 408.06l20.3-118.32-86-83.8a15 15 0 0 1 8.31-25.59l118.81-17.26 53.13-107.66a15 15 0 0 1 26.9 0l53.13 107.66 118.8 17.26a15 15 0 0 1 8.32 25.59l-86 83.8L385 408.06a15 15 0 0 1-14.78 17.53ZM106 205.67l69.85 68.09a15 15 0 0 1 4.32 13.24l-16.49 96.14L250 337.78a15 15 0 0 1 14 0l86.34 45.39L333.83 287a15 15 0 0 1 4.31-13.27L408 205.67l-96.53-14a15 15 0 0 1-11.29-8.2L257 96l-43.17 87.47a15 15 0 0 1-11.3 8.2Z" data-name="1" fill="#7886c7" class="fill-000000"></path></svg>
+    </div>
+  </div>
+  
+
+  <div id="main-content" style="display: none;">
+  </div>
+  
+    <div class="cursor"></div>
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#"><img src="images/Logo.png" class="logo"></a>
+            <ul class="nav__links">
+                <li><a href="#about" class="hover-effect">About</a></li>
+                <li><a href="#skills" class="hover-effect">Skills</a></li>
+                <li><a href="#projects" class="hover-effect">Projects</a></li>
+                <li><a href="#contact" class="hover-effect">Contact</a></li>
+                <li><a href="Resume 1.pdf" class="hover-effect" target="_blank" rel="noopener noreferrer">Resume</a></li>
+            </ul>
+
+          <!--MUSIC BUTTON-->
+            <button id="musicToggle" onclick="toggleMusic()" class="hover-effect">
+                <i id="musicIcon" class="fas fa-volume-mute"></i>
+            </button>
+            
+            <audio id="backgroundMusic" loop>
+                <source src="sounds/podcast-smooth-jazz-fashion-stylish-music-249305.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+          <!--HAMBURGER-->
+        <div class="hamburger" onclick="toggleMenu()">
+             <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        </nav>
+
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu" id="mobileMenu">
+    <div class="profile">
+        <img src="images/IMG_2496.JPG" alt="Profile Picture">
+        <h3>Yohana Michael</h3>
+        <p>Web Developer</p>
+    </div>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+    </header> 
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="section hero" style="min-height:60vh;">
+        <div class="section__container">
+            <div class="section__content">
+                <h1 style="font-size:80px;">Hey, I'm Yohana!</h1>
+                <p>A <span style="color:#7886C7; font-weight: bold;" class="highlight"> Web Developer</span> based in Nashville,TN passionate about helping businesses build beautiful and responsive, optimized websites to give the best user experience.</p>
+                <div class="btn-container">
+                    <a href="#projects" class="button btn-primary hover-effect">View My Work</a>
+                    <a href="#contact" class="button btn-outline hover-effect">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ABOUT SECTION-->
+    <section id="about" class="section about">
+        <div class="section__container">
+            <div class="section__content">
+                <h2>About Me</h2>
+                <p style="max-width:100%; color:#FFF2F2;"> My journey into web development started with curiosity and a natural love for creating—whether it’s food, music, or, in this case, tech. I enjoy bringing ideas to life with clean code and intuitive design. I focus on HTML, CSS, JavaScript, and SEO, creating fast, responsive, and user-friendly websites. Whether I’m building sleek landing pages, optimizing search rankings, or designing seamless user experiences, my goal is to make every project better than the last. <br>
+                   <br> When I’m not coding, I'm probably spending my free time producing and making music, visiting local food spots, or online shopping. Now let’s create something beautiful together!</p>
+            </div>
+            <div class="section__image">
+                <img src="images/IMG_9041.JPG" alt="Your Image">
+            </div>
+        </div>
+    </section>
+    
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <div class="skills__grid">
+            <div class="skill"><i class="fab fa-html5"></i><p>HTML</p></div>
+            <div class="skill"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+            <div class="skill"><i class="fab fa-js"></i><p>JavaScript</p></div>
+            <div class="skill"><i class="fa-brands fa-figma"></i><p>Figma</p></div>
+            <div class="skill"><i class="fa-brands fa-bootstrap"></i><p>Bootstrap</p></div>
+            <div class="skill"><i class="fa-brands fa-wordpress"></i><p>Wordpress</p></div>
+            <div class="skill"><i class="fa-brands fa-github"></i><p>Git</p></div>
+        </div>
+    </section>
+    
+    <div class="gradient-background">
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects">
+        <h2 style="color:#2D336B; padding-bottom:30px;">Projects</h2>
+        <div class="projects__grid">
+            <div class="project">
+                <img src="images/Screenshot 2025-03-29 231155.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>Quick iFix</h4>
+                    <p class="project__tags">Wordpress</p>
+                    <p class="project__description">My first real project! Developed a Wordpress website using elementor for a phone repair business and included seo. </p>
+                    <hr>
+                    <div class="project__links">
+                       
+                        <a href="https://quickifixphone.com" target="_blank"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/Screenshot 2025-04-04 222117.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>Lume Luxe</h4>
+                    <p class="project__tags">HTML • CSS • JavaScript</p>
+                    <p class="project__description">A fake ecommerce website for a jewlery business with multiple pages. Functional and responsive!</p>
+                    <hr>
+                    <div class="project__links">
+                        <a href="https://github.com/yohanalemu/lume-luxe" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+                        <a href="https://yohanalemu.github.io/lume-luxe/" target="_blank"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/Screenshot 2025-04-04 222417.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>Blog Template</h4>
+                    <p class="project__tags">HTML • CSS • JavaScript</p>
+                    <p class="project__description">Designed and developed a personal blog I am currently building! Here is a finshed template but will be migrating to wordpress.</p>
+                    <hr>
+                    <div class="project__links">
+                        <a href="https://github.com/yohanalemu/My-Personal-Blog" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+                        <a href="https://yohanalemu.github.io/My-Personal-Blog/" target="_blank"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/portfolio-screenshot.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>Yohana's Portfolio</h4>
+                    <p class="project__tags">HTML • CSS • JavaScript</p>
+                    <p class="project__description">Designed and developed my ideal portfolio you're currently on!</p>
+                    <hr>
+                    <div class="project__links">
+                        <a href="https://github.com/yohanalemu/My-Portfolio" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="images/Screenshot 2025-04-04 222244.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>OFLOW Landing Page</h4>
+                    <p class="project__tags">HTML • CSS • JavaScript</p>
+                    <p class="project__description">Redesigned and developed the landing page for a local bakery business.</p>
+                    <hr>
+                    <div class="project__links">
+                        <a href="https://github.com/yohanalemu/OFLOW" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+                        <a href="https://yohanalemu.github.io/OFLOW/" target="_blank"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="project">
+                <img src="images/maine-street-screenshot.png" alt="Project 1">
+                <div class="project__content">
+                    <h4>Maine Street Landing Page</h4>
+                    <p class="project__tags">HTML • CSS • Bootstrap</p>
+                    <p class="project__description">Redesigned and developed the landing page for my local city Murfreesboro, TN.</p>
+                    <hr>
+                    <div class="project__links">
+                        <a href="https://github.com/yohanalemu/Maine-Street" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+                        <a href="https://yohanalemu.github.io/Maine-Street/" target="_blank"><i class="fas fa-external-link-alt hover-effect"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+           
+        </div>
+    </section>
+    
+    
+<!-- CONTACT SECTION-->
+<section id="contact" class="section contact">
+    <div class="text">
+        <h2 style="padding-top:70px; color:#FFF2F2;">Contact Me</h2>
+        <p style="font-size: 24px;">Feel free to reach out! I'm open to collaborations, projects, or just a friendly chat.</p>
+
+        <?php
+        if (isset($_SESSION["success"])) {
+            echo "<p class='contact-message success'>" . $_SESSION["success"] . "</p>";
+            unset($_SESSION["success"]);
+        }
+        if (isset($_SESSION["error"])) {
+            echo "<p class='contact-message error'>" . $_SESSION["error"] . "</p>";
+            unset($_SESSION["error"]);
+        }
+        ?>
+    </div>
+
+    <form class="contact__form" action="contact.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+    <!--FOOTER-->
+<footer>
+    <div class="contact__links">
+        <a href="mailto:yohanamichael51@yahoo.com" alt="email"><i class="fas fa-envelope hover-effect"></i></a>
+        <a href="https://github.com/yohanalemu" target="_blank"><i class="fab fa-github hover-effect"></i></a>
+        <a href="https://www.linkedin.com/in/yohana-michael-06ab16297/" target="_blank"><i class="fab fa-linkedin hover-effect"></i></a>
+    </div>
+</footer>
+</div>
+
+
+    
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/bd35505d07.js" crossorigin="anonymous"></script>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>

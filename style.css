@@ -565,6 +565,29 @@
     transition:.3s ease-in-out;
 }
 
+
+.contact-message {
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-message.success {
+    color: #2D336B;
+    background-color: #d3ffe4;
+    border: 1px solid #2D336B;
+}
+
+.contact-message.error {
+    color: #fff;
+    background-color: #ff4e4e;
+    border: 1px solid #cc0000;
+}
+
+
 @media (max-width: 768px) {
 
     .nav {
