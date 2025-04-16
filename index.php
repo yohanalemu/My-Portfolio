@@ -37,7 +37,7 @@
                 <li><a href="#skills" class="hover-effect">Skills</a></li>
                 <li><a href="#projects" class="hover-effect">Projects</a></li>
                 <li><a href="#contact" class="hover-effect">Contact</a></li>
-                <li><a href="Resume 1.pdf" class="hover-effect" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="Yohana's Resume.pdf" class="hover-effect" target="_blank" rel="noopener noreferrer">Resume</a></li>
             </ul>
 
           <!--MUSIC BUTTON-->
